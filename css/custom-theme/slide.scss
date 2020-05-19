@@ -14,14 +14,26 @@
     overflow: auto;
   }
 
+  .big-container,
   .small-container {
-    max-width: 1024px;
     margin: 0 auto;
     text-align: left;
   }
+  
+  .small-container {
+    max-width: 1024px;
+  }
+
+  .big-container {
+    max-width: 1440px;
+  }
+
+  &.is-full-width {
+    width: 100%;
+  }
 
   .is-centered {
-    display: flex!important;
+    display: flex !important;
     align-items: center;
     justify-content: center;
   }
