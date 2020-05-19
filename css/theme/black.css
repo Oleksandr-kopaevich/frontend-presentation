@@ -295,6 +295,11 @@ body {
   margin: 0 auto;
   text-align: left; }
 
+.reveal .slides .is-centered {
+  display: flex !important;
+  align-items: center;
+  justify-content: center; }
+
 .reveal .buttons-wrap {
   display: flex;
   justify-content: center; }
@@ -357,3 +362,31 @@ body {
     max-width: 600px; }
     .reveal .code-wrap pre + pre {
       margin-left: 100px; }
+
+.reveal .iframe-wrap {
+  position: sticky;
+  top: -38px;
+  background-color: #191919; }
+
+.reveal .avatar-wrapper {
+  height: 300px;
+  width: 300px;
+  background-image: url("../../public/me-magistr.jpg");
+  background-position: center top;
+  border-radius: 50%;
+  margin: 10px auto; }
+
+.reveal .contact-slide {
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  display: flex; }
+
+.reveal .is-text-centered {
+  text-align: center; }
+
+.reveal .job-title {
+  font-size: 26px; }
+
+.reveal .contacts-wrap {
+  font-size: 30px; }

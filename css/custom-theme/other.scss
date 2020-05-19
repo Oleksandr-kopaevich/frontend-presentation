@@ -1,0 +1,27 @@
+.avatar-wrapper {
+  height: 300px;
+  width: 300px;
+  background-image: url("../../public/me-magistr.jpg");
+  background-position: center top;
+  border-radius: 50%;
+  margin: 10px auto;
+}
+
+.contact-slide {
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  display: flex;
+}
+
+.is-text-centered {
+  text-align: center;
+}
+
+.job-title {
+  font-size: 26px;
+}
+
+.contacts-wrap {
+  font-size: 30px;
+}
