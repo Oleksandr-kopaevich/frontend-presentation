@@ -1,0 +1,22 @@
+.slides {
+  * {
+    box-sizing: border-box;
+  }
+
+  section {
+    padding: 0;
+    height: 100%;
+  }
+
+  .slide-content {
+    padding: 30px 100px 100px 30px;
+    max-height: 100%;
+    overflow: auto;
+  }
+
+  .small-container {
+    max-width: 1024px;
+    margin: 0 auto;
+    text-align: left;
+  }
+}

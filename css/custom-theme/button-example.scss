@@ -1,0 +1,27 @@
+pre {
+  width: 100%;
+  margin: 0;
+
+  .code-title {
+    position: absolute;
+    left: 0;
+    top: 25px;
+  }
+
+  code {
+    max-height: none;
+  }
+}
+
+.code-wrap {
+  display: flex;
+  justify-content: center;
+
+  pre {
+    max-width: 600px;
+
+    & + pre {
+      margin-left: 100px;
+    }
+  }
+}

@@ -1,50 +1,360 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
 
-		<title>reveal.js</title>
+    <title>reveal.js</title>
 
-		<link rel="stylesheet" href="css/reset.css">
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/reveal.css" />
+    <link rel="stylesheet" href="css/theme/black.css" />
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/monokai.css">
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/monokai.css" />
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.type = "text/css";
+      link.href = window.location.search.match(/print-pdf/gi)
+        ? "css/print/pdf.css"
+        : "css/print/paper.css";
+      document.getElementsByTagName("head")[0].appendChild(link);
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <section>
+            <div class="small-container">
+              Програми для комунікації:
+              <div>
+                <ul>
+                  <li>Slack</li>
+                  <li>Skype</li>
+                  <li>Zoom</li>
+                  <li>Microsoft teams</li>
+                  <li>Outlook</li>
+                  <li>Hangouts</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class="small-container">
+              Для макетів дизайнів
+              <div>
+                <ul>
+                  <li>
+                    <a href="https://projects.invisionapp.com/" target="_blank"
+                      >InVision</a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://www.figma.com/" target="_blank">Figma</a>
+                  </li>
+                  <li>Photoshop</li>
+                </ul>
+              </div>
+              <a
+                href="https://oleksandr822626.invisionapp.com/prototype/music-ckaauoocr006m3501rekxighm?v=pS1YisgzeCxAYgH9OoWhDA%3D%3D&linkshare=urlcopied"
+                target="_blank"
+                >Приклад макету в InVision</a
+              >
+            </div>
+          </section>
+          <section>
+            <div class="small-container">
+              Дошки для планування і відображення робочого процесу
+              <div>
+                <ul>
+                  <li>
+                    <a href="https://trello.com/" target="_blank">Trello</a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.atlassian.com/software/jira"
+                      target="_blank"
+                      >Jira</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.jetbrains.com/youtrack/"
+                      target="_blank"
+                      >YouTrack</a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://github.com/" target="_blank">GitHub</a
+                    >(Інтегрована як додатковий функціонал)
+                  </li>
+                </ul>
+              </div>
+              <a href="https://trello.com/b/sPM71znr" target="_blank"
+                >Приклад доски планування в Trello</a
+              >
+            </div>
+          </section>
+          <section>
+            <div class="small-container">
+              Програми для написання коду
+              <div>
+                <ul>
+                  <li>
+                    <a href="https://code.visualstudio.com/" target="_blank"
+                      >Visual Studio Code</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.jetbrains.com/webstorm/"
+                      target="_blank"
+                      >WebStorm</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class="slide-content">
+              Створимо компонент кнопки primary
+              <iframe
+                src="./demo/button/button.html"
+                height="114"
+                width="100%"
+              ></iframe>
+              <div class="code-wrap">
+                <pre class="fragment" data-fragment-index="2">
+                  <h6 class="code-title">SASS</h6>
+                  <code class="sass" data-trim data-line-numbers>
+                    .buttons-wrap {
+                      display: flex;
+                      justify-content: center;
+                    }
+                    
+                    .button-wrap {
+                      max-width: 360px;
+                    
+                      & + & {
+                        margin-left: 20px;
+                      }
+                    }
+                    
+                    .button {
+                      width: 100%;
+                    
+                      &.is-primary {
+                        padding: 30px;
+                        border: 4px solid #1db954;
+                        border-radius: 12px;
+                        font: 500 18px/24px sans-serif;
+                        color: #fff;
+                        background-color: #1db954;
+                        outline: none;
+                        transition: all ease-out 0.3s;
+                        cursor: pointer;
+                    
+                        &:hover,
+                        &:focus {
+                          border-color: #33ff7a;
+                          color: #33ff7a;
+                          background-color: #111112;
+                        }
+                      }
+                    
+                      &.has-icon {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                      }
+                    
+                      .icon-wrap {
+                        width: 30px;
+                        height: 30px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    
+                        &:first-child {
+                          margin-right: 8px;
+                        }
+                    
+                        &:last-child {
+                          margin-left: 8px;
+                        }
+                      }
+                    }
+                    
+                    .spotify-icon,
+                    .music-icon {
+                      width: 24px;
+                      height: 24px;
+                    }
+                  </code>
+                </pre>
+                <pre class="fragment" data-fragment-index="1">
+                  <h6 class="code-title">css</h6>
+                  <code class="css" data-trim data-line-numbers>
+                    .buttons-wrap {
+                      display: flex;
+                      justify-content: center;
+                    }
+                
+                    .button-wrap {
+                      max-width: 360px;
+                    }
+                
+                    .button-wrap + .button-wrap {
+                      margin-left: 20px;
+                    }
+                
+                    .button {
+                      width: 100%;
+                    }
+                
+                    .button.is-primary {
+                      padding: 30px;
+                      border: 4px solid #1db954;
+                      border-radius: 12px;
+                      font: 500 18px/24px sans-serif;
+                      color: #fff;
+                      background-color: #1db954;
+                      outline: none;
+                      transition: all ease-out 0.3s;
+                      cursor: pointer;
+                    }
+                
+                    .button.is-primary:hover,
+                    .button.is-primary:focus {
+                      border-color: #33ff7a;
+                      color: #33ff7a;
+                      background-color: #111112;
+                    }
+                
+                    .button.has-icon {
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                    }
+                
+                    .button .icon-wrap {
+                      width: 30px;
+                      height: 30px;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                    }
+                
+                    .button .icon-wrap:first-child {
+                      margin-right: 8px;
+                    }
+                
+                    .button .icon-wrap:last-child {
+                      margin-left: 8px;
+                    }
+                
+                    .spotify-icon,
+                    .music-icon {
+                      width: 24px;
+                      height: 24px;
+                    }
+                  </code>
+                </pre>
+              </div>
+              <div class="small-container">
+                <pre class="fragment" data-fragment-index="3">
+                  <h6 class="code-title">html</h6>
+                  <code class="html" data-trim data-line-numbers>
+                    <div class="buttons-wrap">
 
-		<script src="js/reveal.js"></script>
+                      <div class="button-wrap">
+                        <button class="button is-primary has-icon">
+                          <span class="icon-wrap">
+                            <svg class="spotify-icon">
+                              <use xlink:href="./public/icons.svg#spotify"></use>
+                            </svg>
+                          </span>
+                          Continue with Spotify
+                        </button>
+                      </div>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				hash: true,
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/highlight/highlight.js' },
-					{ src: 'plugin/notes/notes.js', async: true }
-				]
-			});
-		</script>
-	</body>
+                      <div class="button-wrap">
+                        <button class="button is-primary has-icon">
+                          Continue with Apple music
+                          <span class="icon-wrap">
+                            <svg class="music-icon">
+                              <use xlink:href="./public/icons.svg#music"></use>
+                            </svg>
+                          </span>
+                        </button>
+                      </div>
+
+                      <div class="button-wrap">
+                        <button class="button is-primary has-icon">
+                          <span class="icon-wrap">
+                            <svg class="music-icon">
+                              <use xlink:href="./public/icons.svg#music"></use>
+                            </svg>
+                          </span>
+                          Continue with Apple music
+                          <span class="icon-wrap">
+                            <svg class="music-icon">
+                              <use xlink:href="./public/icons.svg#music"></use>
+                            </svg>
+                          </span>
+                        </button>
+                      </div>
+                    </div>
+                  </code>
+                </pre>
+              </div>
+            </div>
+          </section>
+        </section>
+        <section>
+          <div class="slide-content">
+            Повна стаття доступна за посиланням (англ.):<br />
+            <a
+              href="https://hackernoon.com/the-2019-web-developer-roadmap-ab89ac3c380e"
+              target="_blank"
+              >https://hackernoon.com/the-2019-web-developer-roadmap-ab89ac3c380e</a
+            >
+
+            <img src="./public/frontend-path.png" alt="" width="70%" />
+          </div>
+        </section>
+        <section>Slide 2</section>
+      </div>
+    </div>
+
+    <script src="js/reveal.js"></script>
+
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        width: "100%",
+        height: "100%",
+        margin: 0,
+        maxScale: 1.2,
+        hash: true,
+        dependencies: [
+          { src: "plugin/markdown/marked.js" },
+          { src: "plugin/markdown/markdown.js" },
+          { src: "plugin/highlight/highlight.js" },
+          { src: "plugin/zoom-js/zoom.js", async: true },
+          { src: "plugin/notes/notes.js", async: true },
+        ],
+      });
+    </script>
+  </body>
 </html>

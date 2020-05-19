@@ -137,7 +137,8 @@ module.exports = grunt => {
 					'css/theme/source/*.sass',
 					'css/theme/source/*.scss',
 					'css/theme/template/*.sass',
-					'css/theme/template/*.scss'
+					'css/theme/template/*.scss',
+					'css/custom-theme/*.scss'
 				],
 				tasks: 'css-themes'
 			},
